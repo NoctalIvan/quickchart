@@ -1,19 +1,12 @@
 {
-  "name": "npm-module-boilerplate",
+  "name": "node-autochart",
   "version": "1.0.0",
-  "description": "Boilerplate for npm modules with ES6 features and syntax",
+  "description": "In browser NodeJs data visualisation in seconds",
   "main": "./lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
-    "test": "npm run lint && npm run cover",
-    "test:prod": "cross-env BABEL_ENV=production npm run test",
-    "test:only": "mocha --require babel-core/register --require babel-polyfill --recursive",
-    "test:watch": "npm test -- --watch",
-    "test:examples": "node examples/",
-    "cover": "nyc --check-coverage npm run test:only",
-    "lint": "eslint src test",
     "build": "cross-env BABEL_ENV=production babel src --out-dir lib",
-    "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
+    "prepublish": "npm run clean && npm run build"
   },
   "files": [
     "lib",
@@ -21,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flexdinesh/npm-module-boilerplate.git"
+    "url": "git+https://github.com/NoctalIvan/node-autochart"
   },
   "keywords": [
     "boilerplate",
@@ -30,11 +23,8 @@
     "node",
     "javascript"
   ],
-  "author": "Dinesh Pandiyan <flexdinesh@gmail.com>",
+  "author": "Ivan Sedletzki <ivan.sedletzki@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/flexdinesh/npm-module-boilerplate/issues"
-  },
   "homepage": "https://github.com/flexdinesh/npm-module-boilerplate#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
