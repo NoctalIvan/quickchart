@@ -17,11 +17,11 @@
     "url": "git+https://github.com/NoctalIvan/quickchart"
   },
   "keywords": [
-    "boilerplate",
-    "npm",
-    "module",
-    "node",
-    "javascript"
+    "chart",
+    "plot",
+    "chartJs",
+    "data",
+    "visualisation"
   ],
   "author": "Ivan Sedletzki <ivan.sedletzki@gmail.com>",
   "license": "MIT",
