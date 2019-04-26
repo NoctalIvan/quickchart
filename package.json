@@ -1,5 +1,5 @@
 {
-  "name": "node-autochart",
+  "name": "quickchart",
   "version": "1.0.0",
   "description": "In browser NodeJs data visualisation in seconds",
   "main": "./lib/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NoctalIvan/node-autochart"
+    "url": "git+https://github.com/NoctalIvan/quickchart"
   },
   "keywords": [
     "boilerplate",
@@ -25,7 +25,7 @@
   ],
   "author": "Ivan Sedletzki <ivan.sedletzki@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/flexdinesh/npm-module-boilerplate#readme",
+  "homepage": "https://github.com/noctalivan/quickchart#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.1",
