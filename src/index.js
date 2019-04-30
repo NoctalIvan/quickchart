@@ -1,11 +1,25 @@
 const http = require('http');
+const autochart = require('autochart')
 const chartTemplate = require('./chartTemplate')
 
-const startServer = (chart, options = {}) => {
-    const hostname = '127.0.0.1'
+const allowedTypes = Object.keys(autochart)
+
+/**
+ * Starts a server displaying a chart.
+ * @param {string} type Type of chart : line / bar / pie / doughnut / radar / polarArea.
+ * @param {*} data Arbitrary 2-level Object / Array.
+ * @param {object} [options] Optional parameters.
+ */
+const startServer = (type, data, options = {}) => {
+    if(!allowedTypes.includes(type)) {
+        throw 'Unknown type ' + type + '. Allowed : [' + allowedTypes.join(', ') + ']'
+    }
+    
+    const hostname = options.hostname || '127.0.0.1'
     const port = options.port || '8001'
     
     try {
+        const chart = autochart[type](data)
         http.createServer((req, res) => {
             res.end(chartTemplate(chart));
         }).listen(port, hostname, () => {
@@ -21,7 +35,7 @@ const startServer = (chart, options = {}) => {
         } else {
             console.error(error)
         }
-    } 
-};
+    }
+}
 
 module.exports = startServer
