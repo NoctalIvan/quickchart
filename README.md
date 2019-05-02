@@ -2,7 +2,7 @@
 
 Ever wanted to visualize a dataset in a chart in seconds in a node app? Search no further!
 
-QuickChart quickly opens a minimalistic no-dependances node server and displays a chart js graph on your fav' browser.
+QuickChart quickly opens a minimalistic node server and displays a ChartJs graph on your fav' browser using [autoChart](https://www.npmjs.com/package/autochart).
 
 ## Installation
 
@@ -45,7 +45,7 @@ quickchart({
 ```
 
 ```bash
-=> QuickChart is running on 127.0.0.1:8001
+QuickChart is running on 127.0.0.1:8001
 ```
 
 ## License
