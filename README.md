@@ -47,8 +47,8 @@ quickchart('line', [
 QuickChart is running on 127.0.0.1:8001
 ```
 
-![Image of bar](https://octodex.github.com/img/bar.png)
-![Image of line](https://octodex.github.com/img/line.png)
+![Image of bar](https://raw.githubusercontent.com/NoctalIvan/quickchart/master/img/bar.png)
+![Image of line](https://raw.githubusercontent.com/NoctalIvan/quickchart/master/img/line.png)
 
 ## License
 
