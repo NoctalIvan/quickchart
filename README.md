@@ -12,41 +12,43 @@ npm i quickchart
 
 ## Usage
 
-`quickchart(chart, [options])`
+`quickchart(type, data, [options])`
 
-```javascript
-const quickchart = require('quickchart')
+The available chart types are `bar`, `line`, `radar`, `doughnut`, `pie` and `polarArea`.
 
-quickchart({
-    // chartJs object
-}, {
-    // options
-    port: 8001, // Port to open - default value = 8001
-    callback: (error) => {} // optional callback when server is up or fails - default is console.log / console.error
-})
-```
+Available options :
+
+- `port` the server's port
+- `hostname` the server's hostname
+- `callback` a callback when success/fail. `callback(error)`
+
+By default, the port is `8001`, the host is `localhost` and callback is a `console.log` or a `console.error`.
 
 ## Example
 
 ```javascript
 const quickchart = require('quickchart')
 
-quickchart({
-    type: 'bar',
-    data: {
-        labels: ['A', 'B', 'C'],
-        datasets: [{
-            label: 'Data',
-            backgroundColor: 'rgb(255, 0, 0)',
-            data: [42, 69, 10]
-        }]
-    },
+// with an object
+quickchart('bar', {
+    A: {a: 1, b: 2},
+    B: {a:5, b: 9}
 })
+
+// with an array
+quickchart('line', [
+    [3, 6, 8],
+    [8, 19, 29],
+    [12, 20, 4],
+])
 ```
 
 ```bash
 QuickChart is running on 127.0.0.1:8001
 ```
+
+![Image of bar](https://octodex.github.com/img/bar.png)
+![Image of line](https://octodex.github.com/img/line.png)
 
 ## License
 

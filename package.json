@@ -1,6 +1,6 @@
 {
   "name": "quickchart",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "In browser NodeJs data visualisation in seconds",
   "main": "./lib/index.js",
   "scripts": {
